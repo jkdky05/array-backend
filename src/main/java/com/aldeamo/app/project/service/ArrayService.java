@@ -42,7 +42,7 @@ public class ArrayService {
                 }
 
                 notPrimeDividends.add(new ArrayList<>());
-                classifyNumbers(notPrimeDividends, i, primeDividends, primes, cups);
+                classifyCups(notPrimeDividends, i, primeDividends, primes);
                 primes.add(findNextPrime(primes.get(i) + 1));
                 answer.addAll(primeDividends);
 
@@ -54,7 +54,7 @@ public class ArrayService {
     }
 
 
-    public void classifyNumbers(List<List<Integer>> notPrimeDividends, int i, List<Integer> primeDividends, List<Integer> primes, List<Integer> cups){
+    public void classifyCups(List<List<Integer>> notPrimeDividends, int i, List<Integer> primeDividends, List<Integer> primes){
         List<Integer> numbersToClassify = notPrimeDividends.get(i);
 
         for(int j = numbersToClassify.size() - 1; j > -1; j--){
